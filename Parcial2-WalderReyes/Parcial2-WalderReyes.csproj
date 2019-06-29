@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\IncripcionesBLL.cs" />
+    <Compile Include="BLL\IRepository.cs" />
+    <Compile Include="BLL\RepositorioBase.cs" />
     <Compile Include="Entidades\Asignaturas.cs" />
     <Compile Include="Entidades\Estudiantes.cs" />
     <Compile Include="Entidades\Inscripciones.cs" />
