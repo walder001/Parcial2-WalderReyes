@@ -73,9 +73,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Parcial2-WalderReyes\Parcial2-WalderReyes.csproj">
+    <ProjectReference Include="..\Parcial2-WalderReyes\Parcial2-WalderRey.csproj">
       <Project>{2A49B667-C4DE-438E-9766-EA112F28C1C2}</Project>
-      <Name>Parcial2-WalderReyes</Name>
+      <Name>Parcial2-WalderRey</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Parcial2_WalderReyes
+namespace Parcial2_WaldeReyes
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Parcial2_WalderReyes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form());
+            Application.Run(new Form1());
         }
     }
 }
