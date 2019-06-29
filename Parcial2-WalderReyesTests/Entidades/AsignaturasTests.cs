@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Parcial2_WaldeReyes.BLL;
+using Parcial2_WaldeReyes.DAL;
 using Parcial2_WaldeReyes.Entidades;
 using System;
 using System.Collections.Generic;
@@ -12,15 +14,51 @@ namespace Parcial2_WaldeReyes.Entidades.Tests
     public class AsignaturasTests
     {
         [TestMethod()]
-        public void AsignaturasTest()
+       public void Guardar()
         {
-            Assert.Fail();
+            RepositorioBase<Asignaturas> repositorio;
+            repositorio = new RepositorioBase<Asignaturas>(new Contexto());
+
+            Assert.IsTrue(repositorio.Guardar(new Asignaturas()));
+        }
+        [TestMethod()]
+        public void Buscar()
+        {
+            RepositorioBase<Asignaturas> repositorio;
+            repositorio = new RepositorioBase<Asignaturas>(new Contexto());
+            Assert.IsNotNull(repositorio.Buscar(1));
+
+        }
+        [TestMethod()]
+        public void GetList()
+        {
+            RepositorioBase<Asignaturas> repositorio;
+            repositorio = new RepositorioBase<Asignaturas>(new Contexto());
+            Assert.IsNotNull(repositorio.GetList(a => true));
+
         }
 
         [TestMethod()]
-        public void AsignaturasTest1()
+        public void Modificar()
         {
-            Assert.Fail();
+            RepositorioBase<Asignaturas> repositorio;
+            repositorio = new RepositorioBase<Asignaturas>(new Contexto());
+            Asignaturas asignaturas = new Asignaturas();
+            asignaturas.AsignaturaId = 1;
+            asignaturas.Descripcion = "Walder";
+            asignaturas.Creditos = 1;
+
+            Assert.IsTrue(repositorio.Modificar(asignaturas));
         }
+        [TestMethod()]
+        public void Eliminar()
+        {
+            RepositorioBase<Asignaturas> repositorio;
+            repositorio = new RepositorioBase<Asignaturas>(new Contexto());
+            Assert.IsNotNull(repositorio.Eliminar(1));
+
+        }
+
+
     }
 }
