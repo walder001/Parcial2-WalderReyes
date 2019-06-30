@@ -15,10 +15,10 @@ namespace Parcial2_WaldeReyes.Entidades
         public int EstudianteId { get; set; }
         public int InscripcionId { get; set; }
 
-        [ForeignKey("EstudianteId")]
+       /* [ForeignKey("EstudianteId")]
         //Permite indicar por cual campo se usara
         //la NAVIGATION PROPERTY
-        public virtual Estudiantes estudiante { get; set; }
+        public virtual Estudiantes Estudiantes { get; set; }*/
         public decimal Balance { get; set; }
 
 

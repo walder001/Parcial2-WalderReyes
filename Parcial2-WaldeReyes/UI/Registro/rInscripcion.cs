@@ -15,13 +15,17 @@ namespace Parcial2_WaldeReyes.UI.Registro
 {
     public partial class rInscripcion : Form
     {
+        List<InscripcionesDetalle> Detalle;
         public rInscripcion()
         {
             InitializeComponent();
-            LLenarComboBox();
+             Detalle = new List<InscripcionesDetalle>();
+            LLenarComboBoxEstudiante();
+            LLenarComboBoxAsignatura();
+
         }
 
-        void Clean()
+        public void Clean()
         {
             InscripcionIdNumericUpDown.Value = 0;
             FechaDateTime.Value = DateTime.Now;
@@ -32,12 +36,20 @@ namespace Parcial2_WaldeReyes.UI.Registro
             
 
         }
-        public void LLenarComboBox()
+        public void LLenarComboBoxEstudiante()
         {
             RepositorioBase<Estudiantes> estudiante = new RepositorioBase<Estudiantes>(new Contexto());
             EstudiantecomboBox.DataSource = estudiante.GetList(e => true);
             EstudiantecomboBox.ValueMember = "EstudianteId";
             EstudiantecomboBox.DisplayMember = "Nombres";
+        }
+        public void LLenarComboBoxAsignatura()
+        {
+            RepositorioBase<Asignaturas> asignatira = new RepositorioBase<Asignaturas>(new Contexto());
+            AsignaturaComboBox.DataSource = asignatira.GetList(a => true);
+            AsignaturaComboBox.ValueMember = "AsignaturaId";
+            AsignaturaComboBox.DisplayMember = "Descripcion";
+
         }
         private Inscripciones LLenaClase()
         {
@@ -98,6 +110,11 @@ namespace Parcial2_WaldeReyes.UI.Registro
 
         }
 
+        public void CargarGrid()
+        {
+            dataGridView.DataSource = null;
+            dataGridView.DataSource = Detalle;
+        }
         private void Guardar_Click(object sender, EventArgs e)
         {
             bool paso = false;
@@ -191,9 +208,8 @@ namespace Parcial2_WaldeReyes.UI.Registro
 
                     )
                 );
-            
-            dataGridView.DataSource = null;
-            dataGridView.DataSource = detalle;
+
+            CargarGrid();
         }
 
         private void Inscripcion_Enter(object sender, EventArgs e)

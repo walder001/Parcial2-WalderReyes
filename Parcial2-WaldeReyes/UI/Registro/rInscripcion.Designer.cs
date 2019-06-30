@@ -50,6 +50,9 @@
             this.CreditoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.AsignaturaComboBox = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.InscripcionIdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoNumericUpDown)).BeginInit();
@@ -61,7 +64,7 @@
             // 
             // Limpiar
             // 
-            this.Limpiar.Location = new System.Drawing.Point(46, 335);
+            this.Limpiar.Location = new System.Drawing.Point(50, 437);
             this.Limpiar.Name = "Limpiar";
             this.Limpiar.Size = new System.Drawing.Size(75, 23);
             this.Limpiar.TabIndex = 55;
@@ -73,12 +76,12 @@
             // 
             this.InscripcionIdNumericUpDown.Location = new System.Drawing.Point(134, 63);
             this.InscripcionIdNumericUpDown.Name = "InscripcionIdNumericUpDown";
-            this.InscripcionIdNumericUpDown.Size = new System.Drawing.Size(94, 20);
+            this.InscripcionIdNumericUpDown.Size = new System.Drawing.Size(186, 20);
             this.InscripcionIdNumericUpDown.TabIndex = 54;
             // 
             // Eliminar
             // 
-            this.Eliminar.Location = new System.Drawing.Point(250, 335);
+            this.Eliminar.Location = new System.Drawing.Point(254, 437);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(75, 23);
             this.Eliminar.TabIndex = 53;
@@ -88,7 +91,7 @@
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(153, 335);
+            this.Guardar.Location = new System.Drawing.Point(157, 437);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(75, 23);
             this.Guardar.TabIndex = 52;
@@ -98,9 +101,9 @@
             // 
             // Buscar
             // 
-            this.Buscar.Location = new System.Drawing.Point(250, 61);
+            this.Buscar.Location = new System.Drawing.Point(337, 61);
             this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(75, 23);
+            this.Buscar.Size = new System.Drawing.Size(80, 23);
             this.Buscar.TabIndex = 51;
             this.Buscar.Text = "Buscar";
             this.Buscar.UseVisualStyleBackColor = true;
@@ -109,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 161);
+            this.label4.Location = new System.Drawing.Point(43, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 48;
@@ -118,7 +121,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 112);
+            this.label3.Location = new System.Drawing.Point(43, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 47;
@@ -149,16 +152,17 @@
             // 
             // FechaDateTime
             // 
-            this.FechaDateTime.Location = new System.Drawing.Point(134, 117);
+            this.FechaDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaDateTime.Location = new System.Drawing.Point(134, 158);
             this.FechaDateTime.Name = "FechaDateTime";
-            this.FechaDateTime.Size = new System.Drawing.Size(191, 20);
+            this.FechaDateTime.Size = new System.Drawing.Size(283, 20);
             this.FechaDateTime.TabIndex = 56;
             // 
             // MontoNumericUpDown
             // 
-            this.MontoNumericUpDown.Location = new System.Drawing.Point(137, 154);
+            this.MontoNumericUpDown.Location = new System.Drawing.Point(137, 188);
             this.MontoNumericUpDown.Name = "MontoNumericUpDown";
-            this.MontoNumericUpDown.Size = new System.Drawing.Size(188, 20);
+            this.MontoNumericUpDown.Size = new System.Drawing.Size(280, 20);
             this.MontoNumericUpDown.TabIndex = 57;
             // 
             // Inscripcion
@@ -170,9 +174,9 @@
             this.Inscripcion.Controls.Add(this.label6);
             this.Inscripcion.Controls.Add(this.CreditoNumericUpDown);
             this.Inscripcion.Controls.Add(this.label5);
-            this.Inscripcion.Location = new System.Drawing.Point(44, 190);
+            this.Inscripcion.Location = new System.Drawing.Point(44, 212);
             this.Inscripcion.Name = "Inscripcion";
-            this.Inscripcion.Size = new System.Drawing.Size(325, 139);
+            this.Inscripcion.Size = new System.Drawing.Size(415, 219);
             this.Inscripcion.TabIndex = 58;
             this.Inscripcion.TabStop = false;
             this.Inscripcion.Text = "groupBox1";
@@ -180,7 +184,7 @@
             // 
             // Agregar
             // 
-            this.Agregar.Location = new System.Drawing.Point(304, 11);
+            this.Agregar.Location = new System.Drawing.Point(379, 11);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(18, 23);
             this.Agregar.TabIndex = 30;
@@ -191,7 +195,7 @@
             // Removerbutton
             // 
             this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Removerbutton.Location = new System.Drawing.Point(6, 110);
+            this.Removerbutton.Location = new System.Drawing.Point(6, 187);
             this.Removerbutton.Name = "Removerbutton";
             this.Removerbutton.Size = new System.Drawing.Size(114, 23);
             this.Removerbutton.TabIndex = 29;
@@ -203,12 +207,12 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(6, 43);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(292, 61);
+            this.dataGridView.Size = new System.Drawing.Size(394, 138);
             this.dataGridView.TabIndex = 4;
             // 
             // BalanceNumericUpDown
             // 
-            this.BalanceNumericUpDown.Location = new System.Drawing.Point(228, 14);
+            this.BalanceNumericUpDown.Location = new System.Drawing.Point(303, 14);
             this.BalanceNumericUpDown.Name = "BalanceNumericUpDown";
             this.BalanceNumericUpDown.Size = new System.Drawing.Size(70, 20);
             this.BalanceNumericUpDown.TabIndex = 3;
@@ -216,7 +220,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(178, 21);
+            this.label6.Location = new System.Drawing.Point(253, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 2;
@@ -226,7 +230,7 @@
             // 
             this.CreditoNumericUpDown.Location = new System.Drawing.Point(68, 14);
             this.CreditoNumericUpDown.Name = "CreditoNumericUpDown";
-            this.CreditoNumericUpDown.Size = new System.Drawing.Size(106, 20);
+            this.CreditoNumericUpDown.Size = new System.Drawing.Size(143, 20);
             this.CreditoNumericUpDown.TabIndex = 1;
             this.CreditoNumericUpDown.ValueChanged += new System.EventHandler(this.NumericUpDown1_ValueChanged);
             // 
@@ -242,16 +246,45 @@
             // EstudiantecomboBox
             // 
             this.EstudiantecomboBox.FormattingEnabled = true;
-            this.EstudiantecomboBox.Location = new System.Drawing.Point(134, 90);
+            this.EstudiantecomboBox.Location = new System.Drawing.Point(134, 96);
             this.EstudiantecomboBox.Name = "EstudiantecomboBox";
-            this.EstudiantecomboBox.Size = new System.Drawing.Size(121, 21);
+            this.EstudiantecomboBox.Size = new System.Drawing.Size(283, 21);
             this.EstudiantecomboBox.TabIndex = 60;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(43, 104);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "Estudiante";
+            // 
+            // AsignaturaComboBox
+            // 
+            this.AsignaturaComboBox.FormattingEnabled = true;
+            this.AsignaturaComboBox.Location = new System.Drawing.Point(134, 131);
+            this.AsignaturaComboBox.Name = "AsignaturaComboBox";
+            this.AsignaturaComboBox.Size = new System.Drawing.Size(283, 21);
+            this.AsignaturaComboBox.TabIndex = 62;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(43, 139);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 63;
+            this.label8.Text = "Materia";
             // 
             // rInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 380);
+            this.ClientSize = new System.Drawing.Size(471, 460);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.AsignaturaComboBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.EstudiantecomboBox);
             this.Controls.Add(this.Inscripcion);
             this.Controls.Add(this.MontoNumericUpDown);
@@ -303,5 +336,8 @@
         private System.Windows.Forms.Button Removerbutton;
         private System.Windows.Forms.Button Agregar;
         private System.Windows.Forms.ComboBox EstudiantecomboBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox AsignaturaComboBox;
+        private System.Windows.Forms.Label label8;
     }
 }

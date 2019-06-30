@@ -56,9 +56,9 @@ namespace Parcial2_WaldeReyes.BLL
             try
             {
                 //todo: buscar las entidades que no estan para removerlas
-                var visitaant = IncripcionesBLL.Buscar(inscripciones.InscripcionId);
+                var buscar = IncripcionesBLL.Buscar(inscripciones.InscripcionId);
                 
-                foreach (var item in inscripciones.Detalle)//recorrer el detalle aterior
+                foreach (var item in buscar.Detalle)//recorrer el detalle aterior
                 {
                     //restar todas las visitas
                      contexto.Estudiantes.Find(item.EstudianteId).Balance -= (double)item.Balance;
@@ -157,7 +157,7 @@ namespace Parcial2_WaldeReyes.BLL
                 foreach (var item in inscripcion.Detalle)
                 {
                     //forzando la ciudad a cargarse
-                    double s = item.estudiante.Balance;
+                   // double s = item.Estudiantes.Balance;
                 }
 }
                 contexto.Dispose();
