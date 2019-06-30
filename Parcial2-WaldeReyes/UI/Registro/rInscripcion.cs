@@ -107,34 +107,37 @@ namespace Parcial2_WaldeReyes.UI.Registro
                 incri = LLenaClase();
             
            
-                if (InscripcionIdNumericUpDown.Value == 0)
-                {
-                    paso = BLL.IncripcionesBLL.Guardar(incri);
+            if (InscripcionIdNumericUpDown.Value == 0)
+            {
+                paso = BLL.IncripcionesBLL.Guardar(incri);
                     
-                }
+            }
+            else
+            {
                 if (!SiExiste())
                 {
                     MessageBox.Show("No se puede modificar una incripcioners que no esiste");
                 }
                 else
                 {
-                    var re = MessageBox.Show("Decea modificar","Question",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-                    if(re == DialogResult.OK)
+                    var re = MessageBox.Show("Decea modificar", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (re == DialogResult.OK)
                     {
                         paso = BLL.IncripcionesBLL.Modificar(incri);
 
                     }
                 }
-                if (paso)
-                {
-                    MessageBox.Show("Guardo","Information",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (paso)
+            {
+                MessageBox.Show("Guardo","Information",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
-                else
-                {
-                    MessageBox.Show("No se pudu guardar","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("No se pudu guardar","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
-                }
+            }
 
         }
 
@@ -146,9 +149,16 @@ namespace Parcial2_WaldeReyes.UI.Registro
         private void Buscar_Click(object sender, EventArgs e)
         {
             Contexto contexto = new Contexto();
-            Inscripciones ints = new Inscripciones();
-            ints =  BLL.IncripcionesBLL.Buscar((int)InscripcionIdNumericUpDown.Value);
-            LLenaCampo(ints);
+            Inscripciones ints =  BLL.IncripcionesBLL.Buscar((int)InscripcionIdNumericUpDown.Value);
+            if (ints != null)
+            {
+                LLenaCampo(ints);
+
+            }
+            else
+            {
+                MessageBox.Show("No se encotro la inscripcion");
+            }
 
         }
 
