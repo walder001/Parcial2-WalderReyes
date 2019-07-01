@@ -32,12 +32,12 @@
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtCriterio = new System.Windows.Forms.TextBox();
-            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
-            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,13 +46,9 @@
             this.cbFiltro.FormattingEnabled = true;
             this.cbFiltro.Items.AddRange(new object[] {
             "Todos",
-            "UsuarioId",
-            "Nombre",
-            "Email",
-            "NivelUsuario",
-            "Usuario",
-            "Clave",
-            "FechaIngreso"});
+            "InscripcionesId",
+            "EstudianteId",
+            "Monto"});
             this.cbFiltro.Location = new System.Drawing.Point(257, 22);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(87, 21);
@@ -74,6 +70,7 @@
             this.btnBuscar.TabIndex = 25;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // txtCriterio
             // 
@@ -81,24 +78,6 @@
             this.txtCriterio.Name = "txtCriterio";
             this.txtCriterio.Size = new System.Drawing.Size(299, 20);
             this.txtCriterio.TabIndex = 24;
-            // 
-            // dtpHasta
-            // 
-            this.dtpHasta.CustomFormat = "dd-MM-yyy";
-            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHasta.Location = new System.Drawing.Point(171, 24);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(80, 20);
-            this.dtpHasta.TabIndex = 23;
-            // 
-            // dtpDesde
-            // 
-            this.dtpDesde.CustomFormat = "dd-MM-yyyy";
-            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDesde.Location = new System.Drawing.Point(80, 24);
-            this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(85, 20);
-            this.dtpDesde.TabIndex = 22;
             // 
             // label4
             // 
@@ -136,6 +115,24 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Desde";
             // 
+            // dtpDesde
+            // 
+            this.dtpDesde.CustomFormat = "dd-MM-yyyy";
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDesde.Location = new System.Drawing.Point(80, 24);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(85, 20);
+            this.dtpDesde.TabIndex = 22;
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.CustomFormat = "dd-MM-yyy";
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHasta.Location = new System.Drawing.Point(171, 24);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(80, 20);
+            this.dtpHasta.TabIndex = 23;
+            // 
             // cInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,11 +162,11 @@
         private System.Windows.Forms.DataGridView dgvConsulta;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtCriterio;
-        private System.Windows.Forms.DateTimePicker dtpHasta;
-        private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
     }
 }

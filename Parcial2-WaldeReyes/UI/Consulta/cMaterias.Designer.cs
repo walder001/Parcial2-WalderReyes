@@ -57,6 +57,7 @@
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(87, 21);
             this.cbFiltro.TabIndex = 27;
+            this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.CbFiltro_SelectedIndexChanged);
             // 
             // dgvConsulta
             // 
@@ -65,6 +66,7 @@
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.Size = new System.Drawing.Size(643, 394);
             this.dgvConsulta.TabIndex = 26;
+            this.dgvConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvConsulta_CellContentClick);
             // 
             // btnBuscar
             // 
@@ -74,6 +76,7 @@
             this.btnBuscar.TabIndex = 25;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // txtCriterio
             // 
@@ -81,6 +84,7 @@
             this.txtCriterio.Name = "txtCriterio";
             this.txtCriterio.Size = new System.Drawing.Size(299, 20);
             this.txtCriterio.TabIndex = 24;
+            this.txtCriterio.TextChanged += new System.EventHandler(this.TxtCriterio_TextChanged);
             // 
             // dtpHasta
             // 
@@ -90,6 +94,7 @@
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(80, 20);
             this.dtpHasta.TabIndex = 23;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.DtpHasta_ValueChanged);
             // 
             // dtpDesde
             // 
@@ -99,6 +104,7 @@
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(85, 20);
             this.dtpDesde.TabIndex = 22;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.DtpDesde_ValueChanged);
             // 
             // label4
             // 
@@ -108,6 +114,7 @@
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 21;
             this.label4.Text = "Contexto";
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // label3
             // 
@@ -117,6 +124,7 @@
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 20;
             this.label3.Text = "Filtro";
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label2
             // 
@@ -126,6 +134,7 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 19;
             this.label2.Text = "Hasta";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label1
             // 
@@ -135,6 +144,7 @@
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Desde";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // cMaterias
             // 
