@@ -1,0 +1,1 @@
+drop database [DbParcial2-WalderReyes2]
