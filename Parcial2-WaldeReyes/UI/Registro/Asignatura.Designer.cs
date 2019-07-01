@@ -52,7 +52,6 @@
             this.Credito.Name = "Credito";
             this.Credito.Size = new System.Drawing.Size(191, 20);
             this.Credito.TabIndex = 43;
-            this.Credito.ValueChanged += new System.EventHandler(this.Credito_ValueChanged);
             // 
             // Limpiar
             // 
@@ -70,7 +69,6 @@
             this.AsignaturaId.Name = "AsignaturaId";
             this.AsignaturaId.Size = new System.Drawing.Size(94, 20);
             this.AsignaturaId.TabIndex = 41;
-            this.AsignaturaId.ValueChanged += new System.EventHandler(this.AsignaturaId_ValueChanged);
             // 
             // Eliminar
             // 
@@ -108,7 +106,7 @@
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.Size = new System.Drawing.Size(191, 20);
             this.Descripcion.TabIndex = 37;
-            this.Descripcion.TextChanged += new System.EventHandler(this.Descripcion_TextChanged);
+            this.Descripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Descripcion_KeyPress);
             // 
             // label4
             // 
@@ -118,7 +116,6 @@
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 36;
             this.label4.Text = "Credito";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // label3
             // 
@@ -128,7 +125,6 @@
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 35;
             this.label3.Text = "Descripcion";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label2
             // 
@@ -138,7 +134,6 @@
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 34;
             this.label2.Text = "AsignaturaId";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label1
             // 
@@ -148,7 +143,6 @@
             this.label1.Size = new System.Drawing.Size(99, 13);
             this.label1.TabIndex = 33;
             this.label1.Text = "Registro Asignatura";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // ErrorProvider
             // 
@@ -172,7 +166,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Asignatura";
             this.Text = "Asignatura";
-            this.Load += new System.EventHandler(this.Asignatura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Credito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsignaturaId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();

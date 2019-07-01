@@ -15,7 +15,7 @@ namespace Parcial2_WaldeReyes.UI.Registro
 {
     public partial class rInscripcion : Form
     {
-        List<InscripcionesDetalle> Detalle;
+        List<InscripcionesDetalle> Detalle { get; set; }
         public rInscripcion()
         {
             InitializeComponent();
@@ -29,13 +29,16 @@ namespace Parcial2_WaldeReyes.UI.Registro
         {
             InscripcionIdNumericUpDown.Value = 0;
             FechaDateTime.Value = DateTime.Now;
+            EstudiantecomboBox.Text = string.Empty;
+            AsignaturaComboBox.Text = string.Empty;
+            PrecioCreditoNumericUpDown.Value = 0;
             MontoNumericUpDown.Value = 0;
             CreditoNumericUpDown.Value = 0;
             BalanceNumericUpDown.Value = 0;
-            dataGridView.DataSource = null;
-            
-
+            Detalle = new List<InscripcionesDetalle>();
+            CargarGrid();
         }
+
         public void LLenarComboBoxEstudiante()
         {
             RepositorioBase<Estudiantes> estudiante = new RepositorioBase<Estudiantes>(new Contexto());
@@ -61,8 +64,9 @@ namespace Parcial2_WaldeReyes.UI.Registro
             {
                 incri.AgregarDetalle(
                     ToInt(item.Cells["InscripcioneDetalleId"].Value),
-                         ToInt(item.Cells["EstudianteId"].Value),
+                         ToInt(item.Cells["AsignaturaId"].Value),
                          ToInt(item.Cells["InscripcionId"].Value),
+                         ToInt(item.Cells["EstudianteId"].Value),
                          ToInt(item.Cells["Balance"].Value)
                        );
 
@@ -86,7 +90,7 @@ namespace Parcial2_WaldeReyes.UI.Registro
             MontoNumericUpDown.Value = (int)inscripciones.Monto;
             dataGridView.DataSource = inscripciones.Detalle;
             dataGridView.Columns["InscripcioneDetalleId"].Visible = false;
-            dataGridView.Columns["EstudianteId"].Visible = false;
+            dataGridView.Columns["AsignaturaId"].Visible = false;
 
         }
 
@@ -193,17 +197,17 @@ namespace Parcial2_WaldeReyes.UI.Registro
 
         private void Agregar_Click(object sender, EventArgs e)
         {
-            List<InscripcionesDetalle> detalle = new List<InscripcionesDetalle>();
 
             if (dataGridView.DataSource != null)
             {
-                detalle = (List<InscripcionesDetalle>) dataGridView.DataSource;
+                Detalle = (List<InscripcionesDetalle>) dataGridView.DataSource;
             }
-            detalle.Add(
+            Detalle.Add(
                 new InscripcionesDetalle(
                     inscripcioneDetalleId: 0,
-                    estudianteId: (int)EstudiantecomboBox.SelectedValue,
+                    asignaturaId: (int)AsignaturaComboBox.SelectedValue,
                     inscripcionId: (int)InscripcionIdNumericUpDown.Value,
+                    estudianteId: (int)EstudiantecomboBox.SelectedValue,
                     balance: (decimal) BalanceNumericUpDown.Value
 
                     )
@@ -238,6 +242,16 @@ namespace Parcial2_WaldeReyes.UI.Registro
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void RInscripcion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BalanceNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            BalanceNumericUpDown.Value = MontoNumericUpDown.Value + (PrecioCreditoNumericUpDown.Value * CreditoNumericUpDown.Value);
         }
     }
 }

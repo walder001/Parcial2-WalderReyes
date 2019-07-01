@@ -101,6 +101,7 @@
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(200, 20);
             this.NombreTextBox.TabIndex = 37;
+            this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
             // 
             // label4
             // 
@@ -161,6 +162,7 @@
             this.BalanceNumericUpDown.DecimalPlaces = 2;
             this.BalanceNumericUpDown.Location = new System.Drawing.Point(116, 209);
             this.BalanceNumericUpDown.Name = "BalanceNumericUpDown";
+            this.BalanceNumericUpDown.ReadOnly = true;
             this.BalanceNumericUpDown.Size = new System.Drawing.Size(200, 20);
             this.BalanceNumericUpDown.TabIndex = 46;
             // 

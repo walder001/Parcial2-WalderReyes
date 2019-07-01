@@ -45,7 +45,12 @@ namespace Parcial2_WaldeReyes.UI.Registro
         {
             bool paso = true;
             ErrorProvider.Clear();
-          
+            if (string.IsNullOrWhiteSpace(Descripcion.Text))
+            {
+                ErrorProvider.SetError(Descripcion, "No puede guardar espacios en blanco");
+                Descripcion.Focus();
+                paso = false;
+            }
             if (Descripcion.Text == string.Empty)
             {
                 ErrorProvider.SetError(Descripcion, "El campo descroipcion no puede esta vacio");
@@ -75,16 +80,6 @@ namespace Parcial2_WaldeReyes.UI.Registro
             Clean();
         }
 
-        private void Credito_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AsignaturaId_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Eliminar_Click(object sender, EventArgs e)
         {
             if (!SiExiste())
@@ -100,6 +95,35 @@ namespace Parcial2_WaldeReyes.UI.Registro
                     AsiganturaBLL.Eliminar((int)AsignaturaId.Value);
 
                 }
+            }
+
+        }
+        public void SoloLentras(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = false;
+                }else if(char.IsControl(e.KeyChar)){
+                    e.Handled = false;
+
+                }else if (char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }else if (char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
         }
@@ -159,34 +183,9 @@ namespace Parcial2_WaldeReyes.UI.Registro
           
         }
 
-        private void Descripcion_TextChanged(object sender, EventArgs e)
+        private void Descripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void Label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Asignatura_Load(object sender, EventArgs e)
-        {
-
+            SoloLentras(e);
         }
     }
 }

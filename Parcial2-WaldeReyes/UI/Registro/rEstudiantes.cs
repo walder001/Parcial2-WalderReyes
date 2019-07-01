@@ -76,6 +76,13 @@ namespace Parcial2_WaldeReyes.UI.Registro
         {
             bool paso = true;
             ErrorProvider.Clear();
+            if (string.IsNullOrWhiteSpace(NombreTextBox.Text))
+            {
+                ErrorProvider.SetError(NombreTextBox,"No puede haber espacio en blanco");
+                NombreTextBox.Focus();
+                paso = false;
+
+            }
             if(NombreTextBox.Text == string.Empty)
             {
                 ErrorProvider.SetError(NombreTextBox,"El campo no puede estar vacio");
@@ -175,6 +182,45 @@ namespace Parcial2_WaldeReyes.UI.Registro
             }
 
            
+        }
+        public void SoloLetras(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsLetter(e.KeyChar))
+                {
+
+                    e.Handled = false;
+
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+
+                    e.Handled = false;
+
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+       
+        private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+
         }
     }
 }
