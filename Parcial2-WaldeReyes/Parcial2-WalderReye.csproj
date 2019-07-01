@@ -61,11 +61,11 @@
     <Compile Include="Entidades\Estudiantes.cs" />
     <Compile Include="Entidades\Inscripciones.cs" />
     <Compile Include="Entidades\InscripcionesDetalle.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,8 +105,8 @@
     <Compile Include="UI\Registro\rInscripcion.Designer.cs">
       <DependentUpon>rInscripcion.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,5 +150,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Release\baseline_delete_white_18dp.png" />
+    <Content Include="Release\baseline_save_white_18dp.png" />
+    <Content Include="Release\boss_man-128.png" />
+    <Content Include="Release\cerrar.png" />
+    <Content Include="Release\clientes.png" />
+    <Content Include="Release\compras.png" />
+    <Content Include="Release\empleados.png" />
+    <Content Include="Release\IMO2.png" />
+    <Content Include="Release\marca.png" />
+    <Content Include="Release\maxi.png" />
+    <Content Include="Release\minimazar.png" />
+    <Content Include="Release\Mobile-Menu-Icon.png" />
+    <Content Include="Release\new iconos\Clientes.png" />
+    <Content Include="Release\new iconos\compras.png" />
+    <Content Include="Release\new iconos\empleados.png" />
+    <Content Include="Release\new iconos\icon cerrar2.png" />
+    <Content Include="Release\new iconos\icon maximizar.png" />
+    <Content Include="Release\new iconos\icon minimizar.png" />
+    <Content Include="Release\new iconos\icon restaurar.png" />
+    <Content Include="Release\new iconos\pagos.png" />
+    <Content Include="Release\new iconos\prodcutos.png" />
+    <Content Include="Release\new iconos\reloj.png" />
+    <Content Include="Release\new iconos\ventas.png" />
+    <Content Include="Release\pagos.png" />
+    <Content Include="Release\prodcutos.png" />
+    <Content Include="Release\producto.png" />
+    <Content Include="Release\reportes.png" />
+    <Content Include="Release\res.png" />
+    <Content Include="Release\venta.png" />
+    <Content Include="Release\ventas.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

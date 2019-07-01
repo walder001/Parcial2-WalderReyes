@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rInscripcion));
             this.Limpiar = new System.Windows.Forms.Button();
             this.InscripcionIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Eliminar = new System.Windows.Forms.Button();
@@ -67,12 +68,16 @@
             // 
             // Limpiar
             // 
-            this.Limpiar.Location = new System.Drawing.Point(50, 465);
+            this.Limpiar.BackColor = System.Drawing.Color.Orange;
+            this.Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Limpiar.Image = ((System.Drawing.Image)(resources.GetObject("Limpiar.Image")));
+            this.Limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Limpiar.Location = new System.Drawing.Point(12, 465);
             this.Limpiar.Name = "Limpiar";
-            this.Limpiar.Size = new System.Drawing.Size(75, 23);
+            this.Limpiar.Size = new System.Drawing.Size(139, 35);
             this.Limpiar.TabIndex = 55;
             this.Limpiar.Text = "Limpiar";
-            this.Limpiar.UseVisualStyleBackColor = true;
+            this.Limpiar.UseVisualStyleBackColor = false;
             this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
             // 
             // InscripcionIdNumericUpDown
@@ -84,32 +89,44 @@
             // 
             // Eliminar
             // 
-            this.Eliminar.Location = new System.Drawing.Point(254, 465);
+            this.Eliminar.BackColor = System.Drawing.Color.Orange;
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Eliminar.Location = new System.Drawing.Point(311, 465);
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.Eliminar.Size = new System.Drawing.Size(123, 35);
             this.Eliminar.TabIndex = 53;
             this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.UseVisualStyleBackColor = false;
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(157, 465);
+            this.Guardar.BackColor = System.Drawing.Color.Orange;
+            this.Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Guardar.Image")));
+            this.Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardar.Location = new System.Drawing.Point(163, 465);
             this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(75, 23);
+            this.Guardar.Size = new System.Drawing.Size(142, 35);
             this.Guardar.TabIndex = 52;
             this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = true;
+            this.Guardar.UseVisualStyleBackColor = false;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
             // Buscar
             // 
-            this.Buscar.Location = new System.Drawing.Point(337, 58);
+            this.Buscar.BackColor = System.Drawing.Color.Orange;
+            this.Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
+            this.Buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscar.Location = new System.Drawing.Point(326, 44);
             this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(80, 23);
+            this.Buscar.Size = new System.Drawing.Size(108, 36);
             this.Buscar.TabIndex = 51;
             this.Buscar.Text = "Buscar";
-            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.UseVisualStyleBackColor = false;
             this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // label4
@@ -158,7 +175,7 @@
             this.FechaDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaDateTime.Location = new System.Drawing.Point(134, 155);
             this.FechaDateTime.Name = "FechaDateTime";
-            this.FechaDateTime.Size = new System.Drawing.Size(283, 20);
+            this.FechaDateTime.Size = new System.Drawing.Size(294, 20);
             this.FechaDateTime.TabIndex = 56;
             // 
             // MontoNumericUpDown
@@ -194,22 +211,28 @@
             // 
             // Agregar
             // 
+            this.Agregar.BackColor = System.Drawing.Color.Orange;
+            this.Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Agregar.Location = new System.Drawing.Point(422, 11);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(18, 23);
             this.Agregar.TabIndex = 30;
             this.Agregar.Text = "+";
-            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.UseVisualStyleBackColor = false;
             this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // Removerbutton
             // 
+            this.Removerbutton.BackColor = System.Drawing.Color.Orange;
+            this.Removerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Removerbutton.Image = ((System.Drawing.Image)(resources.GetObject("Removerbutton.Image")));
             this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Removerbutton.Location = new System.Drawing.Point(6, 206);
             this.Removerbutton.Name = "Removerbutton";
             this.Removerbutton.Size = new System.Drawing.Size(114, 23);
             this.Removerbutton.TabIndex = 29;
             this.Removerbutton.Text = "- Remover Fila";
+            this.Removerbutton.UseVisualStyleBackColor = false;
             this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
             // 
             // dataGridView
@@ -264,7 +287,7 @@
             this.EstudiantecomboBox.FormattingEnabled = true;
             this.EstudiantecomboBox.Location = new System.Drawing.Point(134, 93);
             this.EstudiantecomboBox.Name = "EstudiantecomboBox";
-            this.EstudiantecomboBox.Size = new System.Drawing.Size(283, 21);
+            this.EstudiantecomboBox.Size = new System.Drawing.Size(294, 21);
             this.EstudiantecomboBox.TabIndex = 60;
             // 
             // label7
@@ -281,7 +304,7 @@
             this.AsignaturaComboBox.FormattingEnabled = true;
             this.AsignaturaComboBox.Location = new System.Drawing.Point(134, 128);
             this.AsignaturaComboBox.Name = "AsignaturaComboBox";
-            this.AsignaturaComboBox.Size = new System.Drawing.Size(283, 21);
+            this.AsignaturaComboBox.Size = new System.Drawing.Size(294, 21);
             this.AsignaturaComboBox.TabIndex = 62;
             // 
             // label8
@@ -302,7 +325,7 @@
             0,
             0});
             this.PrecioCreditoNumericUpDown.Name = "PrecioCreditoNumericUpDown";
-            this.PrecioCreditoNumericUpDown.Size = new System.Drawing.Size(280, 20);
+            this.PrecioCreditoNumericUpDown.Size = new System.Drawing.Size(291, 20);
             this.PrecioCreditoNumericUpDown.TabIndex = 64;
             // 
             // label9
@@ -318,6 +341,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(471, 565);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.PrecioCreditoNumericUpDown);

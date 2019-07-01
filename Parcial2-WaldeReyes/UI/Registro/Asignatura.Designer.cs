@@ -55,12 +55,15 @@
             // 
             // Limpiar
             // 
+            this.Limpiar.BackColor = System.Drawing.Color.DarkOrange;
+            this.Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Limpiar.ForeColor = System.Drawing.Color.Black;
             this.Limpiar.Location = new System.Drawing.Point(27, 214);
             this.Limpiar.Name = "Limpiar";
             this.Limpiar.Size = new System.Drawing.Size(75, 23);
             this.Limpiar.TabIndex = 42;
             this.Limpiar.Text = "Limpiar";
-            this.Limpiar.UseVisualStyleBackColor = true;
+            this.Limpiar.UseVisualStyleBackColor = false;
             this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
             // 
             // AsignaturaId
@@ -72,32 +75,41 @@
             // 
             // Eliminar
             // 
+            this.Eliminar.BackColor = System.Drawing.Color.DarkOrange;
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eliminar.ForeColor = System.Drawing.Color.Black;
             this.Eliminar.Location = new System.Drawing.Point(231, 214);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(75, 23);
             this.Eliminar.TabIndex = 40;
             this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.UseVisualStyleBackColor = false;
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // Guardar
             // 
+            this.Guardar.BackColor = System.Drawing.Color.DarkOrange;
+            this.Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Guardar.ForeColor = System.Drawing.Color.Black;
             this.Guardar.Location = new System.Drawing.Point(134, 214);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(75, 23);
             this.Guardar.TabIndex = 39;
             this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = true;
+            this.Guardar.UseVisualStyleBackColor = false;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
             // Buscar
             // 
+            this.Buscar.BackColor = System.Drawing.Color.DarkOrange;
+            this.Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Buscar.ForeColor = System.Drawing.Color.Black;
             this.Buscar.Location = new System.Drawing.Point(231, 61);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(75, 23);
             this.Buscar.TabIndex = 38;
             this.Buscar.Text = "Buscar";
-            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.UseVisualStyleBackColor = false;
             this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // Descripcion
@@ -152,6 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(350, 253);
             this.Controls.Add(this.Credito);
             this.Controls.Add(this.Limpiar);

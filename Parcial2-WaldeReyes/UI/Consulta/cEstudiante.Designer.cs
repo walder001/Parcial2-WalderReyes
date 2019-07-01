@@ -53,7 +53,7 @@
             "Usuario",
             "Clave",
             "FechaIngreso"});
-            this.cbFiltro.Location = new System.Drawing.Point(257, 22);
+            this.cbFiltro.Location = new System.Drawing.Point(189, 16);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(87, 21);
             this.cbFiltro.TabIndex = 27;
@@ -61,14 +61,14 @@
             // dgvConsulta
             // 
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsulta.Location = new System.Drawing.Point(80, 50);
+            this.dgvConsulta.Location = new System.Drawing.Point(12, 44);
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.Size = new System.Drawing.Size(643, 394);
             this.dgvConsulta.TabIndex = 26;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(655, 18);
+            this.btnBuscar.Location = new System.Drawing.Point(587, 12);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(68, 23);
             this.btnBuscar.TabIndex = 25;
@@ -78,7 +78,7 @@
             // 
             // txtCriterio
             // 
-            this.txtCriterio.Location = new System.Drawing.Point(350, 22);
+            this.txtCriterio.Location = new System.Drawing.Point(282, 16);
             this.txtCriterio.Name = "txtCriterio";
             this.txtCriterio.Size = new System.Drawing.Size(299, 20);
             this.txtCriterio.TabIndex = 24;
@@ -87,7 +87,7 @@
             // 
             this.dtpHasta.CustomFormat = "dd-MM-yyy";
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHasta.Location = new System.Drawing.Point(171, 24);
+            this.dtpHasta.Location = new System.Drawing.Point(103, 18);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(80, 20);
             this.dtpHasta.TabIndex = 23;
@@ -96,7 +96,7 @@
             // 
             this.dtpDesde.CustomFormat = "dd-MM-yyyy";
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDesde.Location = new System.Drawing.Point(80, 24);
+            this.dtpDesde.Location = new System.Drawing.Point(12, 18);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(85, 20);
             this.dtpDesde.TabIndex = 22;
@@ -104,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(347, 7);
+            this.label4.Location = new System.Drawing.Point(279, 1);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 21;
@@ -113,7 +113,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(254, 7);
+            this.label3.Location = new System.Drawing.Point(186, 1);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 20;
@@ -122,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 6);
+            this.label2.Location = new System.Drawing.Point(100, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 19;
@@ -131,7 +131,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 6);
+            this.label1.Location = new System.Drawing.Point(9, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 18;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(677, 450);
             this.Controls.Add(this.cbFiltro);
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.btnBuscar);

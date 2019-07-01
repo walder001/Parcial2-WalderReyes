@@ -104,6 +104,13 @@ namespace Parcial2_WaldeReyes.UI.Registro
                 MontoNumericUpDown.Focus();
                 paso = false;
             }
+            if (string.IsNullOrWhiteSpace(dataGridView.Text))
+            {
+                ErrorProvider.SetError(dataGridView,"No puede esta vacio");
+                dataGridView.Focus();
+                paso = false;
+
+            }
             return paso;
 
         }
@@ -190,8 +197,15 @@ namespace Parcial2_WaldeReyes.UI.Registro
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
-            BLL.IncripcionesBLL.Eliminar((int)InscripcionIdNumericUpDown.Value);
+            try
+            {
+                BLL.IncripcionesBLL.Eliminar((int)InscripcionIdNumericUpDown.Value);
 
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se puede buscar");
+            }
 
         }
 
